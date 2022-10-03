@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv("RawData/AgeBySex21Reformatted.csv", encoding = "utf-8")
+df = pd.read_csv("ReformattedData/AgeBySex21Reformatted.csv", encoding = "utf-8")
 
 #df['Y'] = df['County'].apply(lambda x : x.rsplit(' ', 1)[0])
 year_ranges = list(df['Year'].value_counts().index)
@@ -20,7 +20,7 @@ for index, row in df.iterrows():
         row['Year'] = year
         new_df = pd.concat([new_df, row], axis = 1)
 
-new_df.transpose().to_csv("RawData/AgeBySex21Final.csv", index = False)
+new_df.transpose().to_csv("FinalData/AgeBySex21Final.csv", index = False)
 #df.to_csv("RawData/AnnualPopulationEstimatesReformatted.csv", index = False)
 
 if __name__ == "__main__":
