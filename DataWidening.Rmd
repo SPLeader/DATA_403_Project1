@@ -11,17 +11,17 @@ library(tidyverse)
 
 
 ```{r}
-df = read_csv("Final Data/AgeBySex21Final.csv")
+df = read_csv("Final Data/AgeBySex21NewCats.csv")
 ```
 
 ```{r}
-df %>% group_by(County, Age, Year) %>% summarise(my_sum = sum(`Age Group Estimate`)) %>% pivot_wider(names_from = Age, values_from = my_sum) %>% write.csv(.,file = "AgeWider.csv", row.names = FALSE)
+df %>% group_by(County, Age, Year) %>% summarise(my_sum = sum(`Age Group Estimate`)) %>% pivot_wider(names_from = Age, values_from = my_sum) %>% write.csv(.,file = "Final Data/AgeWider.csv", row.names = FALSE)
 ```
 ```{r}
-df2 = read_csv("Final Data/IncomeEstimatesFinal.csv")
+df2 = read_csv("Final Data/IncomeEstimatesNewCats.csv")
 ```
 ```{r}
-df2 %>% group_by(County, Age, Year) %>% summarise(my_sum = sum(`Age Group Estimate`)) %>% pivot_wider(names_from = Age, values_from = my_sum) %>% write.csv(.,file = "AgeWider.csv", row.names = FALSE)
+df2 %>% group_by(County, Income, Year) %>% summarise(my_sum = sum(`Families`)) %>% pivot_wider(names_from = Income, values_from = my_sum) %>% write.csv(.,file = "Final Data/IncomeWider.csv", row.names = FALSE)
 ```
 
 

@@ -25,13 +25,13 @@ def income_helper(x):
 
 def main():
 
-    #df = pd.read_csv("Final Data/IncomeEstimatesFinal.csv", low_memory = False)
-    #df['Income'] = df['Income'].apply(lambda x : income_helper(x))
-    #df.to_csv("Final Data/IncomeEstimatesFinal.csv", index = False)
+    df = pd.read_csv("Final Data/IncomeEstimatesFinal.csv", low_memory = False)
+    df['Income'] = df['Income'].apply(lambda x : income_helper(x))
+    df.to_csv("Final Data/IncomeEstimatesNewCats.csv", index = False)
 
-    #df = pd.read_csv("Final Data/AgeBySex21Final.csv", low_memory = False)
-    #df['Age'] = df['Age'].apply(lambda x : age_helper(x))
-    #df.to_csv("Final Data/IncomeEstimatesFinal.csv", index = False)
+    df = pd.read_csv("Final Data/AgeBySex21Final.csv", low_memory = False)
+    df['Age'] = df['Age'].apply(lambda x : age_helper(x))
+    df.to_csv("Final Data/AgeBySex21NewCats.csv", index = False)
 
 
 
