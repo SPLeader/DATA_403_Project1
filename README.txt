@@ -16,3 +16,9 @@ Description of what each file/folder contains:
 
 	DataMerging.py
 		This file allows us to take all final files --> EstimatesFinal.csv
+
+	CategoryReduction.py
+		This file allows us to transform the categories needed to pivot wider
+
+	DataWidening.Rmd
+		This file pivots two files so our final merged file will have fewer rows, more columns
