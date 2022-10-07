@@ -1,6 +1,6 @@
 import pandas as pd
 
-liquor = pd.read_csv("Iowa_Liquor_Sales.csv", low_memory = False)
+liquor = pd.read_csv("little_liquor.csv", low_memory = False)
 
 def liquor_labeler(df):
 
@@ -22,8 +22,8 @@ def liquor_labeler(df):
 
     for row in range(len(df)):
 
-        alc_type = df.iloc[row,'Item Description']
-        bottle_count = df.iloc[row, 'Bottles Sold']
+        alc_type = df.loc[row,'Item Description']
+        bottle_count = df.loc[row, 'Bottles Sold']
         did_find = False
 
 
@@ -49,13 +49,17 @@ def liquor_labeler(df):
                 data_dict[drink].append(0)
 
         if did_find:
+            if 'OTHER' not in data_dict:
+                data_dict['OTHER'] = []
             data_dict['OTHER'].append(0)
-            did_find = False
-
+            
         else:
             data_dict['OTHER'].append(bottle_count)
+        did_find = False
 
     count_df = pd.DataFrame(data_dict)
+    #print({thing : len(data_dict[thing]) for thing in data_dict})
+    print(count_df)
     return count_df
 
 labeled_liquor = liquor_labeler(liquor)
