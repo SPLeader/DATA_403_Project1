@@ -27,7 +27,7 @@ def liquor_labeler(df):
         did_find = False
 
 
-        if [vodtype for vodtype in vodkalt if vodtype in alc_type] != []
+        if [vodtype for vodtype in vodkalt if vodtype in alc_type] != []:
             alc_type = "Vodka"
 
         elif [teqtype for teqtype in tequilalt if teqtype in alc_type] != []:
@@ -51,7 +51,7 @@ def liquor_labeler(df):
         if did_find:
             data_dict['OTHER'].append(0)
             did_find = False
-            
+
         else:
             data_dict['OTHER'].append(bottle_count)
 
