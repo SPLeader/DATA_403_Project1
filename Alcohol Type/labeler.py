@@ -1,18 +1,26 @@
 import pandas as pd
 
-liquor = pd.read_csv("Iowa_Liquor_Sales.csv")
+liquor = pd.read_csv("Iowa_Liquor_Sales.csv", low_memory = False)
 
 def liquor_labeler(df):
+
     drinks = ['Vodka','Triple Sec','Tequila','Amaretto','Brandy','Schnapps','Gin','Rum','Scotch','Baileys','Rye',
               'Sangria','Kahlua','Bourbon','Whiskey','Everclear',
              'Hennessy','Captain Morgan','Limoncello','Jagermeister']
+
     vodkalt = ['Vodka','New Amsterdam','Smirnoff','Svedka','Absolut','Grey Goose','Ketel One']
+
     tequilalt = ['Tequila','Jose Cuervo']
+
     whiskeyalt = ['Whiksey','Whisky','Jack Daniels',"Jack Daniel's",'Johnnie Walker','Jim Beam','Fireball Cinnamon']
+
     rumalt = ['Rum','Bacardi']
+
     drinks.sort()
+
     rows = []
     for row in range(len(df)):
+        
         alc_type = df.iloc[row,]['Item Description']
         bottle_count = df.iloc[row,]['Bottles Sold']
         row_dict = {}
