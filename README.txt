@@ -1,3 +1,13 @@
+DATA 401/402/403 Project 1
+
+Team Harlech
+Overall submission date: October 21, 2022
+
+Thea Yang / tyang18@calpoly.edu
+Bella White / bwhite17@calpoly.edu
+Amara Zabback / azabback@calpoly.edu
+Sean Leader / spleader@calpoly.edu
+
 Description of what each file/folder contains:
 
 	Beta Estimates
