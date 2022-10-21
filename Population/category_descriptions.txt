@@ -1,8 +1,0 @@
-low - 40k lower
-middle - everything else
-High - 125k plus
-
-young - 21-29
-middle-young - 30-45
-middle-old - 45-65
-old - 65+
