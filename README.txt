@@ -1,24 +1,29 @@
 Description of what each file/folder contains:
 
-	Final Data
-		Contains the final versions of the data files
-		Contains the final merge of all data files
+	Beta Estimates
+		
+		Within this folder are data files containing different beta 
+		estimates for different train/validation splits. We use the
+		data in this folder to analyze how sensitive our model is
+		to the input data.
 
-	Raw Data
-		Contains the original data as downloaded
+	Data Cleaning
 
-	Reformatted Data
-		Contains file versions after some manual reformatting of columns
-		(Also did some equivalent of pivoting)
+		Within this folder are python and R scripts that we used to manipulate
+		and clean the raw data. It involves data pivots, removing nulls, and 
+		cleaning up county names, among many other things.
 
-	DataCleaning.py
-		This file allows us to go from Reformatted Data --> Final Data
+		We do not recommend running any of the files in here, because 
+		data is not in the proper directories for the code to run.
 
-	DataMerging.py
-		This file allows us to take all final files --> EstimatesFinal.csv
+	Data
 
-	CategoryReduction.py
-		This file allows us to transform the categories needed to pivot wider
+		Within this folder are all the data files we used. It contains the
+		final versions of data, the raw data we reformatted, as well as the 
+		final population estimates data.
 
-	DataWidening.Rmd
-		This file pivots two files so our final merged file will have fewer rows, more columns
+	Model Building
+
+		Within this folder are the python scripts we used to manually 
+		implement linear regression. There is also code here used to do
+		the EDA as well as best subsets.
